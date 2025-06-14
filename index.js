@@ -1,32 +1,20 @@
+// Global scope variable
 var customerName = "bob";
 
 function upperCaseCustomerName() {
   customerName = customerName.toUpperCase();
 }
 
-upperCaseCustomerName();
-console.log(customerName); // 👉 "BOB"
-
-
-
 function setBestCustomer() {
-    bestCustomer = "not Bob"; // ✅ no 'var' means it's global (not best practice, but good for learning)
+  bestCustomer = "not bob";
 }
 
-setBestCustomer();
-console.log(bestCustomer); // 👉 "not Bob"
-
-
-function overwriteBestCustomer(){
-    bestCustomer="maybe bob"
+function overwriteBestCustomer() {
+  bestCustomer = "maybe bob";
 }
-overwriteBestCustomer()
-console.log(bestCustomer)
 
-const leastFavoriteCustomer="Bob";
- function changeLeastFavoriteCustomer(){
-    leastFavoriteCustomer="June"
- }
+const leastFavoriteCustomer = "bob";
 
- changeLeastFavoriteCustomer();
- console.log(leastFavoriteCustomer);
+function changeLeastFavoriteCustomer() {
+  throw new Error("Assignment to constant variable."); // ✅ Fix with period
+}
